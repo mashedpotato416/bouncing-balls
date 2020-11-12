@@ -80,23 +80,35 @@ function BallCounter() {
 function UserListen(e) {
   const stepSize = 10
   switch (e.keyCode) {
-    case 87:
-      keyPressed = 'W'
+    case 87: // W
       changeX = 0
       changeY = -stepSize
       break;
-    case 65:
-      keyPressed = 'A'
+    case 38: // up arrow
+      changeX = 0
+      changeY = -stepSize
+      break;
+    case 65: // A left
       changeX = -stepSize
       changeY = 0
       break;
-    case 83:
-      keyPressed = 'S'
+    case 37: // left arrow
+      changeX = -stepSize
+      changeY = 0
+      break;
+    case 83: // S down
       changeX = 0
       changeY = stepSize
       break;
-    case 68:
-      keyPressed = 'D'
+    case 40: // down arrow
+      changeX = 0
+      changeY = stepSize
+      break;
+    case 68: // D right
+      changeX = stepSize
+      changeY = 0
+      break;
+    case 39: // right arrow
       changeX = stepSize
       changeY = 0
       break;
