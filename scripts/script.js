@@ -37,6 +37,13 @@ function loop() {
   requestAnimationFrame(loop);
 }
 
+function BallCounter(count = 5) {
+  bodyElement = document.querySelector('body')
+  counterElement = document.createElement('h2')
+  counterElement.textContent = `Ball: ${ count }`
+  bodyElement.appendChild(counterElement)
+}
+
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -113,3 +120,4 @@ Ball.prototype.collisionDetect = function() {
 
 loop();
 
+BallCounter(15);
